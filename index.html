@@ -3,101 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goon Family</title>
+<title>GOON FAMILY</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Segoe UI,sans-serif;
 }
 
 body{
-background:#0d0d0d;
+background:#090909;
 color:white;
+overflow-x:hidden;
 }
 
 header{
-background:#111;
-padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-border-bottom:2px solid red;
+padding:20px 8%;
+background:rgba(0,0,0,.85);
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+border-bottom:1px solid #ff0000;
 }
 
 .logo{
 font-size:28px;
-font-weight:bold;
-color:red;
+font-weight:900;
+color:#ff1a1a;
+text-shadow:0 0 15px red;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:15px;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff1a1a;
 }
 
 .hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 20px;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.7),
+rgba(0,0,0,.9)),
+url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1500&q=80');
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-font-size:50px;
-color:red;
+font-size:65px;
+color:#ff1a1a;
+text-shadow:0 0 25px red;
 }
 
 .hero p{
 margin-top:15px;
-font-size:18px;
-color:#ccc;
+font-size:20px;
+max-width:700px;
+color:#ddd;
 }
 
 .btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:red;
+margin-top:30px;
+padding:15px 35px;
+background:#ff1a1a;
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:12px;
+font-weight:bold;
+box-shadow:0 0 20px red;
 }
 
 .section{
-padding:50px 20px;
-max-width:1100px;
-margin:auto;
+padding:80px 8%;
 }
 
-.cards{
+.section-title{
+font-size:35px;
+margin-bottom:30px;
+color:#ff1a1a;
+}
+
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .card{
-background:#161616;
-padding:20px;
-border-radius:12px;
-border:1px solid #333;
+background:#141414;
+padding:25px;
+border-radius:15px;
+border:1px solid #222;
+transition:.3s;
 }
 
-.card h3{
-color:red;
-margin-bottom:10px;
+.card:hover{
+transform:translateY(-5px);
+border-color:#ff1a1a;
+box-shadow:0 0 20px rgba(255,0,0,.4);
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.stat{
+background:#141414;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.stat h2{
+color:#ff1a1a;
+font-size:35px;
+}
+
+.socials{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.socials a{
+text-decoration:none;
+background:#ff1a1a;
+color:white;
+padding:12px 20px;
+border-radius:10px;
 }
 
 footer{
+padding:30px;
 text-align:center;
-padding:25px;
-border-top:1px solid #333;
-margin-top:40px;
+border-top:1px solid #222;
+margin-top:50px;
+color:#999;
 }
+
 </style>
 </head>
-
 <body>
 
 <header>
@@ -105,71 +170,112 @@ margin-top:40px;
 
 <nav>
 <a href="#">Beranda</a>
-<a href="#">Anggota</a>
-<a href="#">Forum</a>
-<a href="#">Event</a>
+<a href="#">Anime</a>
+<a href="#">Gaming</a>
+<a href="#">Teknologi</a>
+<a href="#">Komunitas</a>
 </nav>
 </header>
 
 <section class="hero">
+
 <h1>GOON FAMILY</h1>
-<p>Komunitas Gaming • Anime • Teknologi</p>
+
+<p>
+Komunitas Gaming, Anime dan Teknologi.
+Tempat berkumpul, belajar, bermain,
+dan berkembang bersama.
+</p>
 
 <a class="btn" href="#">
 Gabung Sekarang
 </a>
+
 </section>
 
 <section class="section">
-<h2>Visi & Misi</h2>
 
-<div class="cards">
+<h2 class="section-title">
+Tentang Kami
+</h2>
 
-<div class="card">
-<h3>Visi</h3>
-<p>
-Menjadi komunitas yang aktif,
-solid dan positif untuk semua anggota.
-</p>
-</div>
-
-<div class="card">
-<h3>Misi</h3>
-<p>
-Berbagi pengetahuan, hiburan,
-dan pengalaman seputar gaming,
-anime dan teknologi.
-</p>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>Kategori Komunitas</h2>
-
-<div class="cards">
+<div class="grid">
 
 <div class="card">
 <h3>🎮 Gaming</h3>
-<p>Diskusi game, turnamen dan event.</p>
+<p>
+Diskusi game, event, turnamen,
+dan mabar komunitas.
+</p>
 </div>
 
 <div class="card">
 <h3>🎌 Anime</h3>
-<p>Rekomendasi anime dan diskusi karakter.</p>
+<p>
+Rekomendasi anime,
+manga dan diskusi karakter favorit.
+</p>
 </div>
 
 <div class="card">
 <h3>💻 Teknologi</h3>
-<p>Berbagi informasi dan belajar teknologi.</p>
+<p>
+Belajar teknologi,
+komputer dan dunia digital.
+</p>
 </div>
 
 </div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Statistik Komunitas
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>100+</h2>
+<p>Anggota</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Aktif</p>
+</div>
+
+<div class="stat">
+<h2>∞</h2>
+<p>Keseruan</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+Media Sosial
+</h2>
+
+<div class="socials">
+
+<a href="#">Discord</a>
+<a href="#">Instagram</a>
+<a href="#">TikTok</a>
+<a href="#">YouTube</a>
+<a href="#">WhatsApp</a>
+
+</div>
+
 </section>
 
 <footer>
-© 2026 Goon Family
+© 2026 GOON FAMILY • All Rights Reserved
 </footer>
 
 </body>
