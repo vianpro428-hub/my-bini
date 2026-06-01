@@ -1,2 +1,1 @@
-# goon-family
-Website komunitas Goon Family
+Membuat tier list my bini gw😎
