@@ -5,23 +5,39 @@
 
 body{
   background:black;
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .carousel{
   display:flex;
-  justify-content:center;
   align-items:center;
-  gap:30px;
-  margin-top:100px;
+  gap:20px;
 }
 
 .card{
-  width:200px;
+  width:180px;
   border-radius:20px;
+  cursor:pointer;
+  transition:0.5s;
+}
+
+.kiri{
+  transform:perspective(1000px) rotateY(40deg);
+  opacity:0.7;
 }
 
 .tengah{
   width:250px;
+  transform:scale(1.1);
+}
+
+.kanan{
+  transform:perspective(1000px) rotateY(-40deg);
+  opacity:0.7;
 }
 
 </style>
@@ -31,13 +47,49 @@ body{
 
 <div class="carousel">
 
-  <img src="Rikka.jpg" class="card">
+  <img src="Rikka.jpg" class="card kiri">
 
   <img src="Roxy.jpg" class="card tengah">
 
-  <img src="Megu.jpg" class="card">
+  <img src="Megu.jpg" class="card kanan">
 
 </div>
+
+<script>
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    cards.forEach(c=>{
+      c.classList.remove("kiri","tengah","kanan");
+    });
+
+    if(card === cards[0]){
+      cards[0].classList.add("tengah");
+      cards[1].classList.add("kanan");
+      cards[2].classList.add("kiri");
+    }
+
+    if(card === cards[1]){
+      cards[0].classList.add("kiri");
+      cards[1].classList.add("tengah");
+      cards[2].classList.add("kanan");
+    }
+
+    if(card === cards[2]){
+      cards[0].classList.add("kanan");
+      cards[1].classList.add("kiri");
+      cards[2].classList.add("tengah");
+    }
+
+  });
+
+});
+
+</script>
 
 </body>
 </html>
