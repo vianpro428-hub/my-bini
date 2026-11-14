@@ -1,43 +1,161 @@
-
-</h1>
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Istri Vian Paling Imup</title>
     <style>
-        body { background: black; color: white; }
-        .flip-card { ... }
-        .flip-card-inner { ... }
-        .flip-card-klik-return { ... }
+        body { 
+            background: black; 
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Wadah untuk menata foto-foto agar rapi bersebelahan/ke bawah */
+        .galeri {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* 1. Kotak Utama Kartu (Mengaktifkan efek 3D) */
+        .flip-card {
+            background-color: transparent;
+            width: 200px;
+            height: 260px;
+            perspective: 1000px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        /* 2. Bagian dalam yang berputar */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        /* Saat diklik, putar 180 derajat */
+        .flip-card.is-flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* 3. Sisi Depan dan Sisi Belakang */
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Tampilan Sisi Depan (Foto) */
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Tampilan Sisi Belakang (Tulisan Penjelasan) */
+        .flip-card-back {
+            background-color: #1a1a1a;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 2px solid #333;
+        }
+
+        .flip-card-back h3 {
+            margin: 0 0 10px 0;
+            color: #ffcc00;
+            font-size: 16px;
+        }
+
+        .flip-card-back p {
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
 
-    <h1 style="text-align:center;">ini adalah 10 istri vian yg paling imup 🤭😎</h1>
+    <h1>ini adalah 10 istri vian yg paling imup 🤭😎</h1>
 
-    <!-- [2] <p>1.Rikka 🥰🥰❤️😘</p>
-<img src="Rikka.jpg" width="250">-->
-    <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img src="Rikka.jpg" width="..."> <!-- Foto aslimu -->
-            </div>
-            <div class="flip-card-back">
-                <h4>1. Rikka 🤭💖😍</h4>
-                <p>dia istri pertama gw dan anime romance yg gw tonton pertama di th 2019</p>
+    <div class="galeri">
+
+        <!-- 1. Rikka -->
+        <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="Rikka.jpg" alt="Rikka">
+                </div>
+                <div class="flip-card-back">
+                    <h3>1. Rikka 🤭💖😍</h3>
+                    <p>Si imut dengan kekuatan Chuunibyou yang legendaris!</p>
+                </div>
             </div>
         </div>
+
+        <!-- 2. Roxy -->
+        <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="Roxy.jpg" alt="Roxy">
+                </div>
+                <div class="flip-card-back">
+                    <h3>2. Roxy ❤️</h3>
+                    <p>Goddess tercinta guru sihir andalan.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Maka -->
+        <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="Maka.jpg" alt="Maka">
+                </div>
+                <div class="flip-card-back">
+                    <h3>3. Maka 🤭😘</h3>
+                    <p>Karakter keren penuh aksi dari Soul Eater.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Echidna -->
+        <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="Eci.jpg" alt="Echidna">
+                </div>
+                <div class="flip-card-back">
+                    <h3>4. Echidna ❤️😍😘</h3>
+                    <p>Penyihir Keserakahan yang penuh misteri.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 </body>
 </html>
-
-<p>1.Rikka 🥰🥰❤️😘</p>
-<img src="Rikka.jpg" width="250">
-
-<p>2. Roxy ❤️</p>
- <img src="Roxy.jpg" width="250">
-
-<p>3. Maka🥰🥰</p>
-<IMG src="Maka.jpg" width="250">
-
-<p>4. echidna❤️😘😘</p>
-<img src="Eci.jpg" width="250">
